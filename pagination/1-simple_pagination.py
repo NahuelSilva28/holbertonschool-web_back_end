@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+'''Description: Implement a get_page method that
+paginates a dataset based on page and page_size.
+You must use the provided CSV file.
+Use assert to validate page and page_size are positive integers.
+Use index_range to calculate the correct indexes for pagination.
+Return the appropriate page of the dataset or an empty list if out of range.
+'''
 import csv
 import math
 from typing import List, Tuple
