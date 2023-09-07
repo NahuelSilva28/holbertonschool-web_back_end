@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Description: This module defines a function to calculate index ranges for pagination.
+Description: This module defines
+a function to calculate index ranges for pagination.
 """
 
 from typing import Tuple
