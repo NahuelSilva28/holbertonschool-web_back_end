@@ -4,7 +4,6 @@
 from pymongo import MongoClient
 
 if __name__ == "__main__":
-
     client = MongoClient('mongodb://127.0.0.1:27017')
     nginx_collection = client.logs.nginx
 
@@ -21,6 +20,6 @@ if __name__ == "__main__":
     #stats
     print(f"Collection nginx with {n_logs} logs")
     print("Methods:")
-    for method, count in method_counts.items():
-        print(f"\tMethod {method}: {count} logs")
-    print(f"Status checks: {status_check} logs")
+    for method in methods:
+        print(f"\tmethod {method}: {method_counts[method]}")
+    print(f"{status_check} status check")
