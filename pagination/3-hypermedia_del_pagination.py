@@ -41,7 +41,7 @@ class Server:
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """Return dictionary containing hypermedia pagination details.
         """
-        assert isinstance(index, int) and index >= 0, "index must be a non-negative integer"
+        assert isinstance(index, int) and index >= 0, "index"
         indexed_dataset = self.indexed_dataset()
         data = []
         next_index = None
