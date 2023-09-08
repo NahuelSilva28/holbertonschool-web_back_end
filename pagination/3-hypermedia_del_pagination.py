@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """
-Deletion-resilient hypermedia pagination
+Description: Deletion-resilient hypermedia pagination
 """
 
 import csv
-from typing import Dict, List, Union
+from typing import Dict, List
 
 
 class Server:
-    """Server class to paginate a
-    database of popular baby names.
+    """Server class to paginate a database of popular baby names.
     """
     DATA_FILE = "Popular_Baby_Names.csv"
 
@@ -40,10 +39,9 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
-        """Return dictionary containing
-        hypermedia pagination details.
+        """Return dictionary containing hypermedia pagination details.
         """
-        assert isinstance(index, int) and index >= 0,
+        assert isinstance(index, int) and index >= 0, "index must be a non-negative integer"
         indexed_dataset = self.indexed_dataset()
         data = []
         next_index = None
