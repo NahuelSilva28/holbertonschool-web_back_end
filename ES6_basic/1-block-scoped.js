@@ -1,14 +1,17 @@
-//using let no need to declare again
 export default function taskBlock(trueOrFalse) {
-    let task = false;
-    let task2 = true;
-  
+    const task = false;
+    const task2 = true;
+
 
     if (trueOrFalse) {
-      task = true;
-      task2 = false;
+      const innerTask = true;
+      const innerTask2 = false;
+  
+      if (innerTask && innerTask2) {
+        return [innerTask, innerTask2];
+      }
     }
-
-
+  
     return [task, task2];
   }
+  
