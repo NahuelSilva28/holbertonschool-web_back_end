@@ -1,11 +1,9 @@
 function getResponseFromAPI() {
-    return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Sample API response data');
+    }, 2000);
+  });
+}
 
-
-      setTimeout(() => {
-        resolve('Sample API response data');
-      }, 2000);
-    });
-  }
-
-  export default getResponseFromAPI;
+export default getResponseFromAPI;
